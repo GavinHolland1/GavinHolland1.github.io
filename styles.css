@@ -299,7 +299,7 @@ h3 { font-size: 1.4rem; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('background.jpg');
+  background-image: url('Background.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
