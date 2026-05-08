@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Zach Patterson\\\\refind-clean-website\\\\index.html\")",
+      "WebFetch(domain:picsum.photos)"
+    ]
+  }
+}

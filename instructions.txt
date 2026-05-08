@@ -1,0 +1,30 @@
+Build a single-page website for Refind Clean LLC (refindclean.com), a window washing company.
+Model the layout and style after adventurewindowcleaning.com.
+
+Use HTML, CSS, and vanilla JS only. Everything in one folder, no frameworks or build tools.
+Files: index.html, styles.css, script.js
+
+BRAND:
+- Tagline: "Rediscover the beauty of clean"
+- Primary color: dark forest green #3D5C35
+- Accent color: #6B8F5E (lighter sage green)
+- Text: #2C2C2C (near black)
+- Background: #FFFFFF with #F7F7F5 alternating sections
+- Font: Google Fonts — "Playfair Display" for headings (matches the serif logo feel), "Inter" for body text
+- Tone: elegant, trustworthy, premium
+
+STRUCTURE:
+1. Sticky dark forest green nav bar — logo image placeholder on left (comment: <!-- LOGO HERE -->), nav links (Home, About, Services, Gallery, Testimonials, Contact), phone number on right in white
+2. Full-width hero — bold Playfair Display headline "Rediscover the Beauty of Clean", subheadline about professional residential & commercial window washing in northwestern Wisconsin, and a "Get a Free Quote" CTA button in forest green
+3. About section — short premium company description, service area cities (Rice Lake, WI, within Barron County, including Cameron, Barron, Chetek, Birchwood, and Cumberland)
+4. Services section — two elegant cards: Residential Window Cleaning and Commercial Window Cleaning, each with an SVG icon and short description
+5. Gallery section — 6-image grid using placeholder images from https://picsum.photos/800/600?random=1 (increment random number for each)
+6. Testimonials — 3 customer review cards
+7. Quote Request Form — fields: Name, Phone, Email, Property Type (dropdown: Residential/Commercial), Service Needed (dropdown: Exterior Windows, Interior Windows, Both, Gutters), Preferred Date, Message. Submit via mailto:info@refindclean.com
+8. Footer — dark green, logo placeholder, nav links, phone 5175184816, copyright "© 2026 Refind Clean LLC"
+
+STYLE:
+- Mobile responsive with hamburger menu
+- Smooth scroll
+- Subtle hover effects on buttons and cards
+- Clean, minimal — no clutter
