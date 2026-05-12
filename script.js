@@ -82,5 +82,5 @@ document.getElementById('quote-form').addEventListener('submit', function (e) {
   const body = lines.join('\n');
 
   window.location.href =
-    `mailto:info@refindclean.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    `mailto:refindclean25@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
