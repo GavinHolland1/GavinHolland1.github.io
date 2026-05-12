@@ -364,9 +364,36 @@ h3 { font-size: 1.4rem; }
 ======================================== */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 380px 1fr;
   gap: 72px;
   align-items: start;
+}
+
+.about-owner-photo {
+  text-align: center;
+}
+
+.owner-photo {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  box-shadow: var(--shadow-hover);
+  border: 3px solid var(--border);
+}
+
+.owner-caption {
+  margin-top: 14px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
 }
 
 .about-text p {
@@ -478,6 +505,34 @@ h3 { font-size: 1.4rem; }
   line-height: 1.82;
   margin-bottom: 28px;
   font-size: 0.98rem;
+}
+
+.service-list {
+  list-style: none;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.service-list li {
+  color: var(--text-light);
+  font-size: 0.96rem;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.service-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary);
+  opacity: 0.6;
 }
 
 .card-link {
@@ -864,6 +919,12 @@ textarea {
   .about-grid {
     grid-template-columns: 1fr;
     gap: 44px;
+  }
+
+  .owner-photo {
+    max-width: 420px;
+    margin: 0 auto;
+    display: block;
   }
 
   .testimonials-grid {
