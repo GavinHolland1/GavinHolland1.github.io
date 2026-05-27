@@ -363,31 +363,8 @@ h3 { font-size: 1.4rem; }
    ABOUT
 ======================================== */
 .about-grid {
-  display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 72px;
-  align-items: start;
-}
-
-.about-owner-photo {
-  text-align: center;
-}
-
-.owner-photo {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-  aspect-ratio: 4/3;
-  box-shadow: var(--shadow-hover);
-  border: 3px solid var(--border);
-}
-
-.owner-caption {
-  margin-top: 14px;
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 1rem;
-  color: var(--text-light);
+  max-width: 780px;
+  margin: 0 auto;
 }
 
 .about-right {
@@ -710,6 +687,169 @@ h3 { font-size: 1.4rem; }
 }
 
 /* ========================================
+   CTA BAND
+======================================== */
+.cta-band {
+  background: var(--primary);
+  padding: 80px 28px;
+  text-align: center;
+}
+
+.cta-band-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.cta-band h2 {
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.cta-band p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1.08rem;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.btn-cta {
+  background: var(--white);
+  color: var(--primary);
+  padding: 20px 56px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border: 2px solid var(--white);
+  border-radius: var(--radius);
+  transition: background var(--transition), color var(--transition), transform var(--transition), box-shadow var(--transition);
+  display: inline-block;
+}
+
+.btn-cta:hover {
+  background: transparent;
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+}
+
+/* ========================================
+   PAGE HERO (contact page)
+======================================== */
+.page-hero {
+  background: var(--primary);
+  padding: calc(var(--nav-h) + 52px) 28px 52px;
+  text-align: center;
+}
+
+.page-hero-content .section-label {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.page-hero-content h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+.page-hero-content p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+/* ========================================
+   REVIEWS
+======================================== */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.review-card {
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.review-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.review-meta {
+  flex: 1;
+}
+
+.review-meta strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
+.review-stars {
+  color: #e0a020;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+}
+
+.google-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.review-text {
+  color: var(--text-light);
+  font-style: italic;
+  font-size: 0.97rem;
+  line-height: 1.82;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .reviews-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
    CONTACT / FORM
 ======================================== */
 .quote-form {
@@ -914,17 +1054,6 @@ textarea {
 @media (max-width: 900px) {
   :root {
     --section-pad: 72px;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 44px;
-  }
-
-  .owner-photo {
-    max-width: 420px;
-    margin: 0 auto;
-    display: block;
   }
 
   .testimonials-grid {
