@@ -1256,3 +1256,158 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
+
+/* ========================================
+   GALLERY — FEATURED BEFORE/AFTER + LIGHTBOX (added 9/2026)
+======================================== */
+.gallery-featured {
+  aspect-ratio: auto;
+  max-width: 780px;
+  margin: 0 auto 14px;
+  background: var(--bg-alt);
+}
+
+.gallery-featured img {
+  height: auto;
+  display: block;
+}
+
+.gallery-featured figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  padding: 10px 12px;
+  letter-spacing: 0.02em;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(15, 25, 12, 0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 86vh;
+  border-radius: 4px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-caption {
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #e8ede4;
+  font-size: 0.9rem;
+  padding: 0 60px;
+}
+
+.lightbox button {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.lightbox button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.lightbox-close { top: 18px; right: 18px; }
+.lightbox-prev  { left: 14px; top: 50%; transform: translateY(-50%); }
+.lightbox-next  { right: 14px; top: 50%; transform: translateY(-50%); }
+
+/* ========================================
+   REVIEWS — GOOGLE LINK + MOBILE SWIPE (added 9/2026)
+======================================== */
+.reviews-more {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-reviews {
+  display: inline-block;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  padding: 13px 28px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition);
+}
+
+.btn-reviews:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+@media (max-width: 640px) {
+  .reviews-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 14px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .review-card {
+    flex: 0 0 86%;
+    scroll-snap-align: center;
+  }
+
+  .review-card:hover {
+    transform: none;
+  }
+
+  .reviews-more::before {
+    content: "Swipe to see more reviews";
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin: -26px 0 22px;
+  }
+}
+
+/* ========================================
+   FOOTER — FACEBOOK LINK (added 9/2026)
+======================================== */
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.97rem;
+  transition: color var(--transition);
+}
+
+.footer-social:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .footer-social {
+    justify-content: flex-start;
+  }
+}
